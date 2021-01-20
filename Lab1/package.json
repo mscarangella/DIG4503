@@ -1,0 +1,23 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "Marissa Scarangella Lab 1",
+  "main": "Person.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mscarangella/DIG4503"
+  },
+  "keywords": [
+    "DIG4503",
+    "Lab",
+    "1"
+  ],
+  "author": "Marissa Scarangella",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}
