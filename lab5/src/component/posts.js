@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+//remember to npm install axios
 import axios from "axios";
 
 //set up posts
