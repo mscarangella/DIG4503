@@ -1,0 +1,27 @@
+{
+  "name": "participation8",
+  "version": "1.0.0",
+  "description": "participation 8 dig4503c",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "DIG4503"
+  },
+  "keywords": [
+    "DIG4503",
+    "participation",
+    "8"
+  ],
+  "author": "Marissa Scarangella",
+  "type": "module",
+  "license": "ISC"
+}
