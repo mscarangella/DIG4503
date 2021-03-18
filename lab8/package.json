@@ -1,0 +1,26 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "Lab 8",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "DIG4503"
+  },
+  "keywords": [
+    "DIG4503",
+    "Lab",
+    "8"
+  ],
+  "author": "Marissa Scarangella",
+  "license": "ISC",
+  "type": "module"
+}
