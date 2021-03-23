@@ -10,7 +10,7 @@ let fileContents = fs.readFileSync("database.json");
 //parse into json
 let database = JSON.parse(fileContents);
 
-App.use("./", Express.static("public"));
+App.use("/", Express.static("public"));
 
 //find employee name
 App.get("/api/employees/name/:name", (req, res) => {
