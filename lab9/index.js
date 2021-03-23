@@ -1,6 +1,7 @@
-import Express from "express";
+//import Express from "express";
 import fs from "fs";
 
+const Express = require("express");
 const App = Express();
 const port = 3010;
 
