@@ -27,11 +27,11 @@ App.get("/api/employees/name/:name", (req, res) => {
 });
 
 //find employee age
-App.get("/api/employees/ages/:number", (req, res) => {
+App.get("/api/employees/ages/:age", (req, res) => {
   let result = { "error" : "Not Available"};
 
   database.forEach((value) => {
-    if(req.params.number == value.number){
+    if(req.params.age == value.age){
       result = value;
     }
   });
