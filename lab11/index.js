@@ -8,7 +8,7 @@ MongoClient.connect(URL, {useUnifiedTopology: true})
 
   let collection = database.collection("listingsAndReviews");
 
-  let cursor = collection.find({minimum_nights:{$eq:"2"}, beds: {$gte: 2}, price: {$lt: 90.00}});
+  let cursor = collection.find({review_scores:{$gte: "99"}, beds: {$gte: 5}, price: {$lte: 200.00}});
   
   cursor.forEach(document =>{
     console.log(document.name);
