@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MarketItem from './MarketItem';
+import DeleteItem from './DeleteItem';
 
 class Market extends Component {
   constructor(props){
@@ -14,6 +15,9 @@ render() {
     <div>
       <MarketItem count={this.state.count}/>
       <button onClick={() => this.setState({count: this.state.count +1})}>Add Item</button>
+      <br></br>
+      <DeleteItem count={this.state.count}/>
+      <button onClick = {()=> this.setState({count: this.state.count -1})}>Delete Item</button>
     </div>
   );
 }
