@@ -1,5 +1,6 @@
 import Express from "express";
 import fs from "fs";
+import chalk from "chalk";
 
 //const Express = require("express");
 const App = Express();
@@ -37,36 +38,10 @@ App.get("/api/employees/ages/:number", (req, res) => {
   res.json(result);
 })
 
-//find employee position (NEW!!!)
-App.get("/api/employees/position/:position", (req, res) => {
-  let result = { "error" : "Not Available"};
-
-  database.forEach((value) => {
-    if(req.params.position == value.position){
-      result = value;
-    }
-  });
-  res.json(result);
-})
-
-//find employee years of experience (NEW!!!)
-App.get("/api/employees/years/:years", (req, res) => {
-  let result = { "error" : "Not Available"};
-
-  database.forEach((value) => {
-    if(req.params.years == value.years){
-      result = value;
-    }
-  });
-  res.json(result);
-})
-
 App.post("/api/employees/:name/:age", (req, res) => {
   let result = {
     "name": req.params.name, 
-    "age": parseInt(req.params.age),
-    "position": req.params.position,
-    "years": parseInt(req.params.years)
+    "age": parseInt(req.params.age)
   };
 
   database.push(result);
@@ -78,5 +53,6 @@ App.post("/api/employees/:name/:age", (req, res) => {
 
 //port is running
 App.listen(port, () => {
-  console.log("Server Running!");
+  //Chalk color added (NEW!!!!)
+  console.log(chalk.blue.bold("Server Running!"));
 })
