@@ -1,22 +1,32 @@
 [
   {
        "name" :  "Angela" ,
-       "age" : 45
+       "age" : 45,
+       "position" : "Sales",
+       "years" : "9"
   },
   {
        "name" :  "Michael" ,
-       "age" : 50
+       "age" : 50,
+       "position": "Management",
+       "years": "7"
   },
   {
        "name" :  "Jim" ,
-       "age" : 36
+       "age" : 36,
+       "position" : "Sales",
+       "years": "9"
   },
   {
        "name" :  "Kelly" ,
-       "age" : 25
+       "age" : 25,
+       "position" : "Human Resources",
+       "years": "9"
   },
   {
        "name" :  "Ryan" ,
-       "age" : 28
+       "age" : 28,
+       "position" : "Marketing",
+       "years": "9"
   }
 ]
