@@ -44,6 +44,50 @@
       });
     }
 
+//reads position at the company (NEW!!)
+    function readPosition(event){
+
+      event.preventDefault();
+
+      let element = document.querySelector("#position");
+
+      fetch("/api/employees/position/" + element.value)
+      .then((res) => {
+         return res.json();
+      })
+      .then((processed) => {
+        let reporting = document.querySelector("#reportingArea");
+
+        if(processed.error) {
+          reporting.innerHTML = processed.error;
+        } else {
+          reporting.innerHTML = processed.age;
+        }
+      });
+    }
+
+//reads years of experience at the company (NEW!!!)
+    function readYears(event){
+
+      event.preventDefault();
+
+      let element = document.querySelector("#years");
+
+      fetch("/api/employees/years/" + element.value)
+        .then((res) => {
+          return res.json();
+        })
+        .then((processed) => {
+          let reporting = document.querySelector("#reportingArea");
+
+          if(processed.error) {
+            reporting.innerHTML = processed.error;
+          } else {
+            reporting.innerHTML = processed.age;
+          }
+        });
+      }
+
     function createEmployee(event) {
       event.preventDefault();
 
@@ -77,10 +121,26 @@
     <button>Submit</button>
   </form>
 
+  <h2>Position</h2>
+
+  <form onsubmit="">
+    <input id="position" type="text">
+    <button>Submit</button>
+  </form>
+
+<h2>Years of Experience</h2>
+
+  <form onsubmit="">
+    <input id="years" type="text">
+    <button>Submit</button>
+  </form>
+
   <hr>
   <form onsubmit="createEmployee(event)">
     <input id="employeeName" type="text">
     <input id="employeeAge" type="text">
+    <input id="employeePosition" type="text">
+    <input id="employeeYears" type="text">
     <button>Submit</button>
   </form>
   <hr>
