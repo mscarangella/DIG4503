@@ -51,7 +51,7 @@
 
       let age = document.querySelector('#employeeAge');
 
-      fetch("/api/movies/" + name.value + "/" + age.value, {
+      fetch("/api/employees/" + name.value + "/" + age.value, {
         "method": "post"
       })
       .then((res) => {
