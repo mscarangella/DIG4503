@@ -1,7 +1,7 @@
-//import Express from "express";
+import Express from "express";
 import fs from "fs";
 
-const Express = require("express");
+//const Express = require("express");
 const App = Express();
 const port = 3010;
 
@@ -38,7 +38,7 @@ App.get("/api/employees/ages/:number", (req, res) => {
 })
 
 //find employee position (NEW!!!)
-App.get("/api/employees/ages/:position", (req, res) => {
+App.get("/api/employees/position/:position", (req, res) => {
   let result = { "error" : "Not Available"};
 
   database.forEach((value) => {
@@ -50,7 +50,7 @@ App.get("/api/employees/ages/:position", (req, res) => {
 })
 
 //find employee years of experience (NEW!!!)
-App.get("/api/employees/ages/:years", (req, res) => {
+App.get("/api/employees/years/:years", (req, res) => {
   let result = { "error" : "Not Available"};
 
   database.forEach((value) => {
