@@ -31,7 +31,7 @@ App.get("/api/employees/ages/:number", (req, res) => {
   let result = { "error" : "Not Available"};
 
   database.forEach((value) => {
-    if(req.params.number == value.number){
+    if(req.params.number == value.age){
       result = value;
     }
   });
@@ -43,7 +43,7 @@ App.post("/api/employees/:name/:age", (req, res) => {
     "name": req.params.name, 
     "age": parseInt(req.params.age)
   };
-
+  
   database.push(result);
 
   fs.writeFileSync("database.json", JSON.stringify(database, null, '\t'));
