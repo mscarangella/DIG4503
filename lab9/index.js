@@ -48,7 +48,7 @@ App.post("/api/employees/:name/:age", (req, res) => {
 
   fs.writeFileSync("database.json", JSON.stringify(database, null, '\t'));
 
-  res.JSON(result);
+  res.json(result);
 });
 
 //port is running
